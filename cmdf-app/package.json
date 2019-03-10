@@ -2,6 +2,7 @@
   "name": "cmdf",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://f-empower.com",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@pusher/chatkit-client": "^1.4.0",
