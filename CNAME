@@ -1,15 +1,2 @@
 f-empower.com
 www.f-empower.com
-
-
-#stage changes
-$ git add .
-
-#commit changes
-$ git commit -m 'add CNAME file and modify package'
-
-#push to github
-$ git push origin master
-
-#deploy application
-$ npm run deploy
