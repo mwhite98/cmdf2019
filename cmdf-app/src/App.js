@@ -1,39 +1,49 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Typography from '@material-ui/core/Typography';
-import Toolbar from '@material-ui/core/Toolbar';
-import AppBar from '@material-ui/core/AppBar';
+import React, { Component } from "react";
+import "./App.css";
+import { withStyles } from "@material-ui/core/styles";
+import ChatBox from "./components/ChatBox/ChatBox";
+import MenuBar from "./components/MenuBar/MenuBar";
+import Grid from "@material-ui/core/Grid";
+
+const styles = {
+  root: {
+    background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    borderRadius: 3,
+    border: 0,
+    color: "white",
+    height: 48,
+    padding: "0 30px",
+    boxShadow: "0 3px 5px 2px rgba(255, 105, 135, .3)"
+  },
+  colorPrimary: {
+    backgroundColor: "black",
+    color: "blue"
+  }
+};
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <AppBar position="static" color="default">
-      <Toolbar>
-          <Typography variant="h6" color="inherit">
-            SEX BOT
-          </Typography>
-        </Toolbar>
-        </AppBar>
-        <header className="App-header">
-        <h1> NEW APP </h1>
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
+        <MenuBar title="OUR APP" />
+        <Grid container direction="row" justify="center" alignItems="flex-end">
+          <Grid item l={2}>
+            {" "}
+            what up
+          </Grid>
+          <Grid
+            container
+            direction="row"
+            justify="center"
+            alignItems="flex-end"
           >
-            Learn React
-          </a>
-        </header>
+            what up
+            <ChatBox />
+          </Grid>
+        </Grid>
       </div>
     );
   }
 }
 
-export default App;
+export default withStyles(styles)(App);
